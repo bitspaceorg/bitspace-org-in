@@ -1,6 +1,7 @@
 import './globals.css'
 import { Cinzel } from 'next/font/google'
-import UnderConstruction from '@/libs/components/underConstruction'
+import UnderConstruction from '@/libs/components/UnderConstruction'
+import Navbar from '@/libs/components/Navbar'
 
 const cinzel = Cinzel({subsets: ['latin-ext']})
 
@@ -15,14 +16,17 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
 
-    const UNDER_CONSTRUCTION: boolean = true;
+    const UNDER_CONSTRUCTION: boolean = false;
 
     return (
         <html lang="en">
             <body className={cinzel.className}>
-               <div className='flex flex-col items-center justify-center w-screen h-screen'>
-                   { UNDER_CONSTRUCTION ? <UnderConstruction /> : children }
-                </div>
+                   { UNDER_CONSTRUCTION ? <UnderConstruction /> : (
+                        <>
+                            <Navbar />
+                            {children}
+                        </>
+                   )}
             </body>
         </html>
     )

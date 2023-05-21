@@ -1,9 +1,9 @@
 import './globals.css'
-import { Cinzel } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import UnderConstruction from '@/libs/components/UnderConstruction'
 import Navbar from '@/libs/components/Navbar'
 
-const cinzel = Cinzel({subsets: ['latin-ext']})
+const montserrat =  Montserrat ({subsets: ['latin-ext']})
 
 export const metadata = {
     title: 'BITSPACE',
@@ -20,12 +20,12 @@ export default function RootLayout({
 
     return (
         <html lang="en">
-            <body className={cinzel.className}>
+            <body className={montserrat.className}>
                    { UNDER_CONSTRUCTION ? <UnderConstruction /> : (
-                        <>
-                            <Navbar />
+                        <div className='h-[100vh] w-[100vw]'>
+                            <Navbar/>
                             {children}
-                        </>
+                        </div>
                    )}
             </body>
         </html>

@@ -2,6 +2,7 @@ import './globals.css'
 import { Montserrat } from 'next/font/google'
 import UnderConstruction from '@/libs/components/UnderConstruction'
 import Navbar from '@/libs/components/Navbar'
+import NextAuthProvider from './Provider'
 
 const montserrat =  Montserrat ({subsets: ['latin-ext']})
 
@@ -21,12 +22,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={montserrat.className}>
+                    <NextAuthProvider>
                    { UNDER_CONSTRUCTION ? <UnderConstruction /> : (
                         <div className='h-[100vh] w-[100vw]'>
                             <Navbar/>
                             {children}
                         </div>
                    )}
+                    </NextAuthProvider>
             </body>
         </html>
     )

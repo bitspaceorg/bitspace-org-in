@@ -11,4 +11,6 @@ model message {
   id       Int      @id @default(autoincrement())
   content  String
   parentId Int?
+  name     String
+  image    String
 }

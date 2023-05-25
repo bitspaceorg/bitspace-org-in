@@ -38,8 +38,8 @@ const Navbar = () => {
 
     return (
         <>
-        {popup && <Login/>}
-        <div className="bg-black h-[5rem] flex justify-between items-center">
+        { popup && <Login/>}
+        <div className="bg-black h-[5rem] flex justify-between items-center sticky top-[10px]">
         <span className='mx-5 text-4xl font-bold text-white'>:bs</span>
         <div>
             { navLinks.map((link) => {
@@ -57,7 +57,7 @@ const Navbar = () => {
                 </div>
              :
             <button className="text-black rounded-xl bg-[#9333EA] font-bold hover:text-white transition-all w-24 h-10" onClick={authenticate}>
-            <p>SignIn</p>
+            SignIn
             </button>
             }
         </div>

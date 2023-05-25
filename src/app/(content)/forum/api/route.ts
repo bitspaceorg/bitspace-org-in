@@ -7,9 +7,9 @@ export async function GET() {
 }
 
 export async function POST(req:NextRequest) {
-    const { content, parentId } = await req.json()
+    const { content, parentId, name, image } = await req.json()
     const response = await prisma.message.create({
-        data : { content, parentId }
+        data : { content, parentId, name, image }
     })
     return NextResponse.json(response)
 }

@@ -2,26 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "glad";
+  src: url("../libs/assets/fonts/GlacialIndifference-Regular.otf");
+}
+@font-face {
+  font-family: "gladbold";
+  src: url("../libs/assets/fonts/GlacialIndifference-Bold.otf");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "mono";
+  src: url("../libs/assets/fonts/SauceCodeProNerdFont-Regular.ttf");
+}
+@font-face {
+  font-family: "monobold";
+  src: url("../libs/assets/fonts/SauceCodeProNerdFont-SemiBold.ttf");
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/*Webkit Scrollbar : Invisible*/
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "gladbold";
 }

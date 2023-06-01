@@ -21,7 +21,7 @@ dependencies:
     version: 13.4.1(eslint@8.40.0)(typescript@5.0.4)
   next:
     specifier: 13.4.1
-    version: 13.4.1(react-dom@18.2.0)(react@18.2.0)
+    version: 13.4.1(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1)
   postcss:
     specifier: 8.4.23
     version: 8.4.23
@@ -31,6 +31,12 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  sass:
+    specifier: ^1.62.1
+    version: 1.62.1
+  scss:
+    specifier: ^0.2.4
+    version: 0.2.4
   tailwindcss:
     specifier: 3.3.2
     version: 3.3.2
@@ -1472,6 +1478,10 @@ packages:
     engines: {node: '>= 4'}
     dev: false
 
+  /immutable@4.3.0:
+    resolution: {integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==}
+    dev: false
+
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -1861,7 +1871,7 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: false
 
-  /next@13.4.1(react-dom@18.2.0)(react@18.2.0):
+  /next@13.4.1(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1):
     resolution: {integrity: sha512-JBw2kAIyhKDpjhEWvNVoFeIzNp9xNxg8wrthDOtMctfn3EpqGCmW0FSviNyGgOSOSn6zDaX48pmvbdf6X2W9xA==}
     engines: {node: '>=16.8.0'}
     hasBin: true
@@ -1889,6 +1899,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      sass: 1.62.1
       styled-jsx: 5.1.1(react@18.2.0)
       zod: 3.21.4
     optionalDependencies:
@@ -2003,6 +2014,11 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.2.0
       es-abstract: 1.21.2
+    dev: false
+
+  /ometa@0.2.2:
+    resolution: {integrity: sha512-LZuoK/yjU3FvrxPjUXUlZ1bavCfBPqauA7fsNdwi+AVhRdyk2IzgP3JRnevvjzQ6fKHdUw8YISshf53FmpHrng==}
+    engines: {node: '>= 0.2.0'}
     dev: false
 
   /once@1.4.0:
@@ -2324,10 +2340,27 @@ packages:
       is-regex: 1.1.4
     dev: false
 
+  /sass@1.62.1:
+    resolution: {integrity: sha512-NHpxIzN29MXvWiuswfc1W3I0N8SXBd8UR26WntmDlRYf0bSADnwnOjsyMZ3lMezSlArD33Vs3YFhp7dWvL770A==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.0
+      source-map-js: 1.0.2
+    dev: false
+
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /scss@0.2.4:
+    resolution: {integrity: sha512-4u8V87F+Q/upVhUmhPnB4C1R11xojkRkWjExL2v0CX2EXTg18VrKd+9JWoeyCp2VEMdSpJsyAvVU+rVjogh51A==}
+    engines: {node: '>= 0.2.0'}
+    dependencies:
+      ometa: 0.2.2
     dev: false
 
   /semver@6.3.0:

@@ -18,8 +18,8 @@ function InputLink({ name, link, home = false }: headerProps) {
       href={link}
       className={`text-xl font-glb 
       ${
-        pathname.match("/(.*)$")[0] === link
-          ? "text-teal border-b-4 border-b-teal"
+        pathname.match("/(.*)$")![0] === link
+          ? "text-teal border-b-2 border-b-teal"
           : "text-white"
       }
       hover:text-teal hover:text-[1.3rem] transition-all ease-in-out
@@ -43,12 +43,12 @@ export function Header() {
       <nav className="text-white text-xl font-glb flex items-center gap-12">
         <InputLink name="Home" link="/" />
         <InputLink name="About" link="/About" />
-        <InputLink name="Courses" link="/Courses" />
         <InputLink name="Events" link="/Events" />
         <InputLink name="MDS" link="/Mds" />
         <InputLink name="Timeline" link="/Timeline" />
         <InputLink name="Space" link="/Space" />
         <InputLink name="FAQ" link="/FAQ" />
+        <InputLink name="Socials" link="/Socials" />
         <InputLink name="Team" link="/Team" />
       </nav>
       <div>

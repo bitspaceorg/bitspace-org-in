@@ -1,7 +1,9 @@
 "use client";
 
+import { usernameContext } from "@/libs/contexts/AuthContext";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useContext } from "react";
 
 interface headerProps {
   name: string;
@@ -15,8 +17,13 @@ function InputLink({ name, link, home = false }: headerProps) {
     <Link
       href={link}
       className={`text-xl font-glb 
-      ${pathname.match("/(.*)$")[0] === link ? "text-teal" : "text-white"}
-      hover:text-teal hover:text-2xl transition-all ease-in-out
+      ${
+        pathname.match("/(.*)$")[0] === link
+          ? "text-teal border-b-4 border-b-teal"
+          : "text-white"
+      }
+      hover:text-teal hover:text-[1.3rem] transition-all ease-in-out
+      
       `}
     >
       <span>{name.toUpperCase()}</span>
@@ -25,8 +32,11 @@ function InputLink({ name, link, home = false }: headerProps) {
 }
 
 export function Header() {
+  "use client";
+  const abc = useContext(usernameContext);
+
   return (
-    <header className="fixed z-50 top-0 w-screen shadow-[0px_20px_50px_20px_#000000] bg-black flex items-center justify-between p-5">
+    <header className="fixed z-50 top-0 w-screen shadow-[0px_0px_50px_2px_#000000] bg-black flex items-center justify-between p-5">
       <div>
         <span className="text-white text-3xl text-glb">:bs</span>
       </div>
@@ -43,7 +53,7 @@ export function Header() {
       </nav>
       <div>
         <button className="text-glb text-black font-glb bg-teal px-4 py-2">
-          LOGIN
+          {abc.username !== "" ? "PROFILE" : "LOGIN"}
         </button>
       </div>
     </header>

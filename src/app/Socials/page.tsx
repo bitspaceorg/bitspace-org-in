@@ -45,7 +45,7 @@ export default function Socials() {
   return (
     <main className="min-h-screen mt-32 py-10 flex flex-col items-center">
       <div className="m-5">
-        <span className="text-white text-4xl font-glb">Join with Us</span>
+        <span className="text-white text-4xl font-glb">JOIN US AT</span>
       </div>
       <div className="grid justify-items-center grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-12 m-5">
         <SocialCard

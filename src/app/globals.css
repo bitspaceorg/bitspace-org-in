@@ -20,6 +20,22 @@
   src: url("../libs/assets/fonts/SauceCodeProNerdFont-SemiBold.ttf");
 }
 
+@media (max-width: 1080px) {
+  root {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  root {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  root {
+    font-size: 10px;
+  }
+}
+
 /*Webkit Scrollbar : Invisible*/
 *::-webkit-scrollbar {
   display: none;
@@ -36,4 +52,8 @@
   padding: 0;
   margin: 0;
   font-family: "gladbold";
+}
+
+* {
+  user-select: none;
 }

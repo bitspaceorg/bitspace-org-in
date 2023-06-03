@@ -1,4 +1,4 @@
-import socials from "@/libs/sass/socials.module.scss";
+import colors from "@/libs/sass/colors.module.scss";
 import Link from "next/link";
 
 import instagramIcon from "@/libs/assets/svg/insta.svg";
@@ -19,7 +19,7 @@ function SocialCard(props: {
       <div
         className={
           "flex h-[455.11px] w-[256px] flex-col items-center justify-between px-3 py-6 rounded-3xl hover:border-4 hover:border-white transition-all duration-400 " +
-          socials[props.name]
+          colors[props.name]
         }
       >
         <div className="m-5">
@@ -29,7 +29,7 @@ function SocialCard(props: {
           src={props.icon}
           alt={props.name}
           width={128}
-          className={socials[props.name] + "bg-blend-color"}
+          className={colors[props.name] + "bg-blend-color"}
         />
         <div className=" my-16">
           <span className="px-7 py-2 rounded-xl font-monb bg-white text-black transition-all ease-in-out ">
@@ -43,7 +43,7 @@ function SocialCard(props: {
 
 export default function Socials() {
   return (
-    <main className="min-h-screen mt-32 py-10 flex flex-col items-center">
+    <main className="min-h-screen mt-3 py-10 flex flex-col items-center">
       <div className="m-5">
         <span className="text-white text-4xl font-glb">JOIN US AT</span>
       </div>

@@ -1,0 +1,51 @@
+$progress: linear-gradient(
+  to right,
+  #fefeff,
+  #fea5b9,
+  #00d2ff,
+  #743001,
+  #010100,
+  #fe0001,
+  #ffa401,
+  #fffe01,
+  #008101,
+  #0000ff,
+  #4b0183
+);
+
+.pride {
+  background: url("../assets/images/progress.png");
+  background-position: center;
+  background-size: cover;
+  background-clip: text;
+  filter: brightness(1.1);
+  & span {
+    color: transparent;
+  }
+}
+
+.instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.discord {
+  background: #7289da;
+}
+
+.twitter {
+  background: #1da1f2;
+}
+
+.linkedin {
+  background: #0077b5;
+}
+.github {
+  background: #25282e;
+}

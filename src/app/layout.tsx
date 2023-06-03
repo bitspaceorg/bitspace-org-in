@@ -19,10 +19,10 @@ export default function RootLayout({
   const UNDER_CONSTRUCTION: boolean = false;
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body className="bg-black subpixel-antialiased">
         <UsernameProvider username={loginCheck()}>
           <Header />
-          <div className="flex flex-col items-center justify-center w-screen h-screen">
+          <div className="absolute top-[10%] flex flex-col items-center justify-center w-screen h-screen">
             {UNDER_CONSTRUCTION ? <UnderConstruction /> : children}
           </div>
           <Footer />

@@ -1,0 +1,13 @@
+@keyframes inftext {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-700%);
+  }
+}
+
+.anim-inftext {
+  white-space: nowrap;
+  animation: inftext 3s linear infinite;
+}

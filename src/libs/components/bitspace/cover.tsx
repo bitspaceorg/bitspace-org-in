@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function Cover() {
   return (
-    <section className="flex justify-end h-screen w-[50vw] overflow-hidden">
+    <section className="flex justify-end h-screen overflow-hidden">
       <Image src={coverImage} alt="cover.svg" priority={true} />
     </section>
   );

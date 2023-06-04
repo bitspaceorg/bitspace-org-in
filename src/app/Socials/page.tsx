@@ -72,7 +72,12 @@ export default function Socials() {
           icon={linkedinIcon}
           link="https://www.linkedin.com/company/bitspaceorg/mycompany/"
         />
-        <SocialCard name="github" un="bitspaceorg" icon={githubIcon} link="" />
+        <SocialCard
+          name="github"
+          un="bitspaceorg"
+          icon={githubIcon}
+          link="https://github.com/bitspaceorg"
+        />
       </div>
     </main>
   );

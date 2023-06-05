@@ -17,7 +17,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
 
-    const UNDER_CONSTRUCTION: boolean = false;
+    const UNDER_CONSTRUCTION: boolean = true;
 
     return (
         <html lang="en">

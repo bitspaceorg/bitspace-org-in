@@ -18,7 +18,7 @@ function SocialCard(props: {
     <Link href={props.link} target="_blank">
       <div
         className={
-          "flex h-[455.11px] w-[256px] flex-col items-center justify-between px-3 py-6 rounded-3xl hover:border-4 hover:border-white transition-all duration-400 " +
+          "flex h-[455.11px] w-[256px] flex-col items-center justify-between px-3 py-6 rounded-3xl hover:border-4 hover:border-white transition-all duration-300 " +
           colors[props.name]
         }
       >
@@ -43,7 +43,7 @@ function SocialCard(props: {
 
 export default function Socials() {
   return (
-    <main className="min-h-screen mt-3 py-10 flex flex-col items-center">
+    <main className=" py-10 flex flex-col items-center">
       <div className="m-5">
         <span className="text-white text-4xl font-glb">JOIN US AT</span>
       </div>

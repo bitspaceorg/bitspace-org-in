@@ -28,15 +28,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black subpixel-antialiased">
-        <Lsuspense>
-          <UsernameProvider username={loginCheck()}>
-            <Header />
-            <div className="absolute top-[10%] flex flex-col items-center justify-center w-screen h-screen">
-              {UNDER_CONSTRUCTION ? <UnderConstruction /> : children}
-            </div>
-            <Footer />
-          </UsernameProvider>
-        </Lsuspense>
+        <UsernameProvider username={loginCheck()}>
+          <Header />
+          <div className="absolute top-[10%] flex flex-col items-center justify-center w-screen min-h-[90vh]">
+            <Lsuspense>
+              {UNDER_CONSTRUCTION ? <UnderConstruction /> : children}{" "}
+            </Lsuspense>
+          </div>
+          <Footer />
+        </UsernameProvider>
       </body>
     </html>
   );

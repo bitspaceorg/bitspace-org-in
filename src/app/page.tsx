@@ -2,12 +2,12 @@ import { Cover } from "@/libs/components/bitspace/cover";
 import Image from "next/image";
 
 function Screendiv({ children }: { children: any }) {
-  return <div className="min-h-screen w-screen mb-2">{children}</div>;
+  return <div className="min-h-[90vh] my-3 w-screen">{children}</div>;
 }
 
 export default function Home() {
   return (
-    <main className="w-screen min-h-screen flex flex-col items-stretch">
+    <main className="w-screen min-h-[90vh] flex flex-col items-stretch">
       <Screendiv>
         <Welcome />
       </Screendiv>
@@ -45,7 +45,7 @@ function Welcome() {
 
 function What() {
   return (
-    <section className="flex items-center my-6">
+    <section className="flex items-center h-screen">
       <div className="basis-1/2 flex items-center justify-center">
         <span className="text-6xl text-white font-glb">
           What is{" "}
@@ -53,7 +53,7 @@ function What() {
           ?
         </span>
       </div>
-      <div className="basis-1/2 bg-white text-black h-screen pl-24 pr-16 flex rounded-3xl rounded-l-full items-center">
+      <div className="basis-1/2 bg-white text-black h-full pl-24 pr-16 flex rounded-3xl rounded-l-full items-center">
         <p className=" font-gla text-xl 2xl:text-2xl text-center leading-relaxed">
           <mark className="bg-black text-white font-glb mx-1 px-3 py-1 rounded-xl">
             :bitspace
@@ -72,8 +72,8 @@ function What() {
 
 function Why() {
   return (
-    <section className="flex items-center h-screen my-6">
-      <div className="basis-1/2 flex items-center justify-center rounded-3xl rounded-r-full bg-white h-screen">
+    <section className="flex items-center h-screen">
+      <div className="basis-1/2 flex items-center justify-center rounded-3xl rounded-r-full bg-white h-full">
         <span className="text-6xl text-black font-glb">
           Why{" "}
           <mark className="bg-black text-white p-2 mx-3 rounded-3xl">

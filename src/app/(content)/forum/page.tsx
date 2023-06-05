@@ -10,7 +10,7 @@ const Forum = () => {
     const { data : session } = useSession()
     const [dom, setDom] = useState(false)
     const [content, setContent] = useState('')
-    const [messages, setMessages] = useState([])
+    const [messages, setMessages] =useState<any[]>([])
     const [parentId, setParentId] = useState(null)
     const [reply, setReply] = useState('')
     const [person, setPerson] = useState('')
@@ -40,8 +40,8 @@ const Forum = () => {
                         <button className="w-[5%] h-full text-[1rem] mx-3 inline-block" onClick={handleReply} ><span className="text-[1rem] mr-2 scale-[0.75] material-symbols-outlined">reply</span>Reply</button>
                     </div>
                     { messages.map(child => {
-                        if ( child?.parentId === message.id ) return (
-                            <Message key={child.id} message={child} />
+                        if ( (child as any).parentId === message.id ) return (
+                            <Message key={(child as any).id} message={child} />
                         )
                     }) }
                 </div>
@@ -75,8 +75,8 @@ const Forum = () => {
                 setError("Message sent")
                 setStatus("sucess")
                 setNotify(true)
-                const { data } = await axios.post('/forum/api', { content, parentId, name: session.user.name, image: session.user.image })
-                setMessages(prev => [...prev,data])
+                const { data }: { data: any[] } = await axios.post('/forum/api', { content, parentId, name: (session as any).user.name, image: (session as any).user.image });
+                setMessages((prev: any[]) => [...prev, ...data]);
             }
         }else{
             setError("Need to be logged in")
@@ -92,8 +92,8 @@ const Forum = () => {
             <div className="text-white mr-[2rem]">
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
                 { messages.map(message => {
-                    if ( message.parentId === null ) return (
-                        <Message key={message.id} message={message} />
+                    if ( (message as any).parentId === null ) return (
+                        <Message key={(message as any).id} message={message} />
                     )
                 }) }
             </div>

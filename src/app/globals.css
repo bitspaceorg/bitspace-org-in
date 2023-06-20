@@ -57,3 +57,11 @@
 * {
   user-select: none;
 }
+
+.dot-matrix {
+  background-image: radial-gradient(#777 1%, #00000000 8%);
+  background-color: #000000;
+  background-position: 50% 50%;
+  background-size: 20px 20px;
+  background-repeat: repeat;
+}

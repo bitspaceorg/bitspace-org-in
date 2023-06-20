@@ -1,4 +1,5 @@
-import { Cover } from "@/libs/components/bitspace/cover";
+import coverImage from "@/libs/assets/svg/coveropt.svg";
+
 import Image from "next/image";
 
 function Screendiv({ children }: { children: any }) {
@@ -24,20 +25,20 @@ export default function Home() {
 function Welcome() {
   return (
     <div className="flex items-center">
-      <div className="flex flex-col items-center basis-1/2">
+      <div className="flex flex-col items-center basis-2/3">
+        <h1 className="text-3xl my-4">:bitspace</h1>
         <span className="text-white text-5xl lg:text-6xl xl:text-8xl">
           EVERY BIT IS <br />
           <mark className="text-gray bg-nocl"> OPEN</mark> TO ALL
         </span>
-        <span className="font-mono text-teal text-md lg:text-xl xl:text-2xl text-right m-2">
-          <span className="text-white font-monb opacity-90">
-            Srivatsav Auswin,&nbsp;
-          </span>
-          Media Head
-        </span>
       </div>
-      <div className="basis-1/2">
-        <Cover />
+      <div className="basis-1/3 h-[90vh] self-stretch">
+        <Image
+          src={coverImage}
+          alt="cover.svg"
+          priority={true}
+          className="h-[90vh]"
+        />
       </div>
     </div>
   );

@@ -50,7 +50,7 @@ export function Header() {
         <InputLink name="Home" link="/" />
         <InputLink name="About" link="/About" />
         <InputLink name="Events" link="/Events" />
-        <InputLink name="MDS" link="/Mds" />
+        <InputLink name="MDS" link="/MDs" />
         <InputLink name="Timeline" link="/Timeline" />
         <InputLink name="Space" link="/Space" />
         <InputLink name="FAQ" link="/FAQ" />

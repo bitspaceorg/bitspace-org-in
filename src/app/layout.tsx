@@ -7,13 +7,14 @@ import { Header } from "@/libs/components/layouts/header";
 import { Footer } from "@/libs/components/layouts/footer";
 import { UsernameProvider } from "@/libs/contexts/AuthContext";
 import { loginCheck } from "@/libs/utills/login";
-import Lsuspense from "@/libs/components/Lsuspense";
+import Lsuspense from "@/libs/components/layouts/loading_suspense";
 
 export const metadata = {
   title: "BITSPACE",
   description:
     "Bit Space (@bitspaceorg) : A community started by students from Chennai Institute of Technology. Aims in building community for awareness and positive impact on open source projects.",
   colorScheme: "dark",
+  keywords: ["bitspaceorg", "bitspace cit", "cit bitspace"],
   openGraph: {
     images: ["@/libs/assets/images/bitspace-embed.png"],
   },

@@ -4,8 +4,8 @@ import React from "react";
 const UnderConstruction = () => {
   return (
     <>
-      <div className="text-3xl">WEBSITE UNDER CONSTRUCTION</div>
-      <div className="mt-12 text-sm text-left">
+      <div className="text-3xl">PAGE UNDER CONSTRUCTION</div>
+      <div className="mt-5 text-lg text-left">
         meanwhile, you could follow us on our socials
       </div>
       <div className="flex flex-row mt-4">

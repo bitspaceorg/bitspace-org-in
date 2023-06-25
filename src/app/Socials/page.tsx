@@ -52,7 +52,7 @@ export default function Socials() {
           name="instagram"
           un="bitspaceorg"
           icon={instagramIcon}
-          link=""
+          link="https://www.instagram.com/bitspaceorg/"
         />
         <SocialCard
           name="discord"

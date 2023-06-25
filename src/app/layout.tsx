@@ -25,6 +25,8 @@ export const metadata = {
   openGraph: {
     title: ":bitspace",
     images: [
+      "https://cdn.discordapp.com/attachments/1106935324556406866/1122462968311992350/metaimg1x1.png",
+      "https://cdn.discordapp.com/attachments/1106935324556406866/1122462952163917954/metaimg4x3.png",
       "https://cdn.discordapp.com/attachments/1106935324556406866/1122462919041503263/metaimg16x9.png",
     ],
     description:

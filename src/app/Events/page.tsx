@@ -1,3 +1,9 @@
-export default function EventPage() {
-  return <div></div>;
+import UnderConstruction from "@/libs/components/underConstruction";
+
+export default function Events() {
+  return (
+    <div className="h-[90vh] w-full flex flex-col items-center justify-center">
+      <UnderConstruction />
+    </div>
+  );
 }

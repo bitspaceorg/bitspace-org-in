@@ -20,7 +20,7 @@ function InputLink({ name, link, home = false }: headerProps) {
   return (
     <Link
       href={link}
-      className={`text-xl font-glb 
+      className={`font-glb 
       ${
         pathname.match("/(.*)$")![0] === link
           ? "text-teal border-b-2 border-b-teal"
@@ -40,19 +40,17 @@ export function Header() {
   const abc = useContext(usernameContext);
 
   return (
-    <header className="fixed z-50 top-0 w-screen h-[10%] shadow-[0px_0px_50px_2px_#000000] bg-black flex items-center justify-between p-5">
+    <header className="fixed z-50 top-0 w-screen h-[10%] shadow-[0px_0px_50px_2px_#000000] bg-black flex items-center justify-between p-5 border-[#ffffff] ">
       <Link href="/">
         <div className="w-16 flex justify-center">
-          <Image src={bits_pride} alt="bitspace-pride" />
+          <Image src={bits_pride} alt="bitspace-pride" width={55} />
         </div>
       </Link>
-      <nav className="text-white text-xl font-glb flex flex-row items-center gap-12">
+      <nav className="text-white text-lg font-glb flex flex-row items-center gap-2 md:gap-5 xl:gap-12 ">
         <InputLink name="Home" link="/" />
         <InputLink name="About" link="/About" />
         <InputLink name="Events" link="/Events" />
-        <InputLink name="MDS" link="/MDs" />
         <InputLink name="Timeline" link="/Timeline" />
-        <InputLink name="Space" link="/Space" />
         <InputLink name="FAQ" link="/FAQ" />
         <InputLink name="Socials" link="/Socials" />
         <InputLink name="Team" link="/Team" />

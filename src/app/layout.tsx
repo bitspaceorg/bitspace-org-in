@@ -25,11 +25,12 @@ export const metadata = {
   openGraph: {
     title: ":bitspace",
     images: [
-      "@/libs/assets/images/metaimg1x1.png",
-      "@/libs/assets/images/metaimg16x9.png",
-      "@/libs/assets/images/metaimg4x3.png",
+      { url: "@/libs/assets/images/metaimg1x1.png", width: 512, height: 512 },
+      { url: "@/libs/assets/images/metaimg16x9.png", width: 480, height: 270 },
+      { url: "@/libs/assets/images/metaimg4x3.png", width: 400, height: 300 },
     ],
-    description: "A Spotlight for Open Source Contributions",
+    description:
+      "A community started by students from Chennai Institute of Technology. Aims in building community for awareness and positive impact on open source projects.",
   },
 };
 

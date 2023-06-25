@@ -25,9 +25,7 @@ export const metadata = {
   openGraph: {
     title: ":bitspace",
     images: [
-      { url: "@/libs/assets/images/metaimg1x1.png", width: 512, height: 512 },
-      { url: "@/libs/assets/images/metaimg16x9.png", width: 480, height: 270 },
-      { url: "@/libs/assets/images/metaimg4x3.png", width: 400, height: 300 },
+      "https://cdn.discordapp.com/attachments/1106935324556406866/1122462919041503263/metaimg16x9.png",
     ],
     description:
       "A community started by students from Chennai Institute of Technology. Aims in building community for awareness and positive impact on open source projects.",

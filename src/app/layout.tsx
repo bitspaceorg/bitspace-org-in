@@ -14,9 +14,22 @@ export const metadata = {
   description:
     "Bit Space (@bitspaceorg) : A community started by students from Chennai Institute of Technology. Aims in building community for awareness and positive impact on open source projects.",
   colorScheme: "dark",
-  keywords: ["bitspaceorg", "bitspace cit", "cit bitspace"],
+  viewport: "width=device-width, initial-scale=1",
+  keywords: [
+    "bitspaceorg",
+    "bitspace cit",
+    "cit bitspace",
+    "open source",
+    ":bitspace",
+  ],
   openGraph: {
-    images: ["@/libs/assets/images/bitspace-embed.png"],
+    title: ":bitspace",
+    images: [
+      "@/libs/assets/images/metaimg1x1.png",
+      "@/libs/assets/images/metaimg16x9.png",
+      "@/libs/assets/images/metaimg4x3.png",
+    ],
+    description: "A Spotlight for Open Source Contributions",
   },
 };
 

@@ -8,7 +8,7 @@ function Landing() {
       className="flex md:h-main flex-col md:flex-row md:items-stretch  w-screen"
       id="landing"
     >
-      <div className="basis-2/3 flex flex-col  items-center justify-center newspaper bg-opacity-40">
+      <div className="basis-2/3 flex flex-col  items-center justify-center  bg-opacity-40">
         <h1 className="font-extrabold text-7xl text-center">
           EVERY BIT IS
           <br /> <mark className="bg-nocl text-accent">OPEN</mark> TO ALL

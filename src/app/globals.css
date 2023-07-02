@@ -2,58 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "glad";
-  src: url("../libs/assets/fonts/GlacialIndifference-Regular.otf");
-}
-@font-face {
-  font-family: "gladbold";
-  src: url("../libs/assets/fonts/GlacialIndifference-Bold.otf");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-  font-family: "mono";
-  src: url("../libs/assets/fonts/SauceCodeProNerdFont-Regular.ttf");
-}
-@font-face {
-  font-family: "monobold";
-  src: url("../libs/assets/fonts/SauceCodeProNerdFont-SemiBold.ttf");
+  font-family: "glacialbold";
+  src: url("../libs/assets/fonts/glacial/GlacialIndifference-Bold.otf");
 }
 
-@media (max-width: 1080px) {
-  root {
-    font-size: 18px;
-  }
-}
-@media (max-width: 768px) {
-  root {
-    font-size: 12px;
-  }
-}
-@media (max-width: 600px) {
-  root {
-    font-size: 10px;
-  }
+.coverImage {
+  background-image: url("../libs/assets/graphics/cover.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-/*Webkit Scrollbar : Invisible*/
+.newspaper {
+  background-image: url("../libs/assets/images/newspaper.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 *::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 * {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "gladbold";
-}
-
-* {
-  user-select: none;
+body {
+  color: black;
+  font-family: "inter";
 }

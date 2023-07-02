@@ -1,31 +1,41 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/libs/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/libs/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
     colors: {
-      black: "#000000",
-      white: "#FFFFFF",
-      teal: "#C3E6CD",
-      gray: "#555555",
-      ylw: "#FFE675",
+      white: "#F0F0F0",
+      accent: "#9482DA",
+      lpurple: "#E7E1FF",
+      black: "#001001",
       nocl: "#00000000",
+      bsprime: "#191919",
+      blue: "#6287E7",
+      pink: "#E98AB8",
+      green: "#8AE9B0",
+      yellow: "#E9DF8A",
+      red: "#E98A8A",
     },
     fontFamily: {
-      gla: "glad",
-      glb: "gladbold",
-      mono: "mono",
-      monb: "monobold",
+      inter: "Inter",
+      glb: "GlacialBold",
     },
+
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      minHeight: {
+        main: "92vh",
       },
+      height: {
+        header: "8vh",
+        main: "92vh",
+      },
+      backgroundImage: {},
     },
   },
   plugins: [],

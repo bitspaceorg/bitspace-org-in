@@ -1,109 +1,116 @@
-import { Cover } from "@/libs/components/bitspace/cover";
 import Image from "next/image";
+import cover from "@/libs/assets/graphics/cover.svg";
+import { JsxElement } from "typescript";
 
-function Screendiv({ children }: { children: any }) {
-  return <div className="min-h-[90vh] my-3 w-screen">{children}</div>;
-}
-
-export default function Home() {
+function Landing() {
   return (
-    <main className="w-screen min-h-[90vh] flex flex-col items-stretch">
-      <Screendiv>
-        <Welcome />
-      </Screendiv>
-      <Screendiv>
-        <What />
-      </Screendiv>
-      <Screendiv>
-        <Why />
-      </Screendiv>
-    </main>
-  );
-}
-
-function Welcome() {
-  return (
-    <div className="flex items-center">
-      <div className="flex flex-col items-center basis-1/2">
-        <span className="text-white text-5xl lg:text-6xl xl:text-8xl">
-          EVERY BIT IS <br />
-          <mark className="text-gray bg-nocl"> OPEN</mark> TO ALL
-        </span>
-        <span className="font-mono text-teal text-md lg:text-xl xl:text-2xl text-right m-2">
-          <span className="text-white font-monb opacity-90">
-            Srivatsav Auswin,&nbsp;
-          </span>
-          Media Head
-        </span>
+    <div
+      className="flex md:h-main flex-col md:flex-row md:items-stretch  w-screen"
+      id="landing"
+    >
+      <div className="basis-2/3 flex flex-col  items-center justify-center newspaper bg-opacity-40">
+        <h1 className="font-extrabold text-7xl text-center">
+          EVERY BIT IS
+          <br /> <mark className="bg-nocl text-accent">OPEN</mark> TO ALL
+        </h1>
       </div>
-      <div className="basis-1/2">
-        <Cover />
-      </div>
+      <div className="basis-1/3 coverImage w-full border-l-bsprime border-l-4 border-b-4"></div>
     </div>
   );
 }
 
-function What() {
+function BsCircle() {
   return (
-    <section className="flex items-center h-screen">
-      <div className="basis-1/2 flex items-center justify-center">
-        <span className="text-6xl text-white font-glb">
-          What is{" "}
-          <mark className="bg-white py-2 px-5 mx-3 rounded-3xl">:Bitspace</mark>{" "}
-          ?
-        </span>
-      </div>
-      <div className="basis-1/2 bg-white text-black h-full pl-24 pr-16 flex rounded-3xl rounded-l-full items-center">
-        <p className=" font-gla text-xl 2xl:text-2xl text-center leading-relaxed">
-          <mark className="bg-black text-white font-glb mx-1 px-3 py-1 rounded-xl">
-            :bitspace
-          </mark>
-          is a dynamic and innovative organization that provides a platform for
-          young and talented coders to showcase their skills by creating and
-          contributing to open-source projects. The organization is committed to
-          promoting the spirit of open collaboration and knowledge sharing, and
-          encourages the development of cutting-edge technology solutions that
-          can benefit the wider community.
-        </p>
-      </div>
-    </section>
+    <div className="bg-white rounded-full border-2 h-36 w-36 flex justify-center items-center absolute bottom-0 translate-l-1/2 translate-y-1/2 shadow-lg">
+      <span className="text-4xl font-bold">BS</span>
+    </div>
   );
 }
 
-function Why() {
+function About() {
+  const Bullet = (props: { name: string; color: string }) => {
+    return (
+      <div className="flex justify-center items-center gap-3 text-sm">
+        <div className={`bg-${props.color}` + " w-4 h-4 rounded-full"}></div>
+        <span className="font-inter font-bold">{props.name}</span>
+      </div>
+    );
+  };
+
+  const Markgif = ({ children }: { children: string }) => {
+    return <mark className="bg-nocl text-lpurple">{children}</mark>;
+  };
+
   return (
-    <section className="flex items-center h-screen">
-      <div className="basis-1/2 flex items-center justify-center rounded-3xl rounded-r-full bg-white h-full">
-        <span className="text-6xl text-black font-glb">
-          Why{" "}
-          <mark className="bg-black text-white p-2 mx-3 rounded-3xl">
-            &nbsp;:Bitspace{" "}
-          </mark>{" "}
-          ?
-        </span>
-      </div>
-      <div className="basis-1/2 text-black h-screen  pl-20 pr-14 flex flex-col justify-center items-center">
-        <p className=" font-gla text-lg 2xl:text-2xl text-white text-center my-2">
-          Led by a team of young and passionate individuals,{" "}
-          <span className="font-glb mx-1 px-3 py-1 rounded-xl cursor-pointer hover:text-black leading-loose hover:bg-white transition-all ease-in-out">
-            :bitspace
-          </span>{" "}
-          is committed to fostering a culture of innovation and excellence. The
-          organization has a proven track record of delivering high-quality
-          projects and initiatives, and has earned a reputation for its
-          commitment to quality, transparency, and accountability.
-        </p>
-        <p className=" font-gla text-lg 2xl:text-2xl text-white text-center my-2">
-          Whether you are a seasoned developer or just starting out,
-          <span className="font-glb mx-1 px-3 py-1 rounded-xl cursor-pointer hover:text-black leading-loose hover:bg-white transition-all ease-in-out">
-            :bitspace
-          </span>
-          offers a wealth of opportunities for learning, collaboration, and
-          growth. Join us today and become part of a dynamic and supportive
-          community of like-minded individuals who are passionate about coding
-          and technology.
-        </p>
-      </div>
-    </section>
+    <>
+      <section className="m-16 flex flex-col items-center">
+        <div className="px-10 py-32 bg-accent border-2 relative flex flex-col items-center">
+          <article className="text-6xl font-inter font-bold text-center">
+            Bitspace is an organisation fostering <Markgif>innovation</Markgif>{" "}
+            and providing a platform for young coders to showcase their{" "}
+            <Markgif>skills</Markgif> through <Markgif>open-source</Markgif>{" "}
+            projects
+          </article>
+          <BsCircle />
+        </div>
+        <div className="my-2 flex justify-between w-full text-xs">
+          <div className="flex gap-12 lg:gap-20">
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-red w-4 h-4 rounded-full"></div>
+              <span className="font-inter font-bold">FRONTEND</span>
+            </div>
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-blue w-4 h-4 rounded-full"></div>
+              <span className="font-inter font-bold">BACKEND</span>
+            </div>
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-accent w-4 h-4 rounded-full"></div>
+              <span className="font-inter font-bold">DEVOPS</span>
+            </div>
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-green w-4 h-4 rounded-full"></div>
+              <span className="font-inter font-bold">DBMS</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-12 lg:gap-20">
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-green w-4 h-4 rounded-full"></div>
+              <span className="font-inter font-bold">OPEN SOURCE</span>
+            </div>
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-accent w-4 h-4 rounded-full"></div>
+              <span className="font-inter font-bold">UI/UX</span>
+            </div>
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-blue w-4 h-4 rounded-full"></div>
+              <span className="font-inter font-bold">CLOUD</span>
+            </div>
+            <div className="flex justify-center items-center gap-3">
+              <div className="bg-red w-4 h-4 rounded-full"></div>
+              <span className="font-inter font-bold">VIM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="m-16 flex flex-col items-center">
+        <div className="px-10 py-32 bg-white flex flex-col items-center">
+          <article className="text-4xl font-inter font-bold text-center">
+            This organization is committed to promoting the spirit of open
+            collaboration and knowledge sharing, and encourages the development
+            of cutting-edge technology solutions that can benefit the wider
+            community.
+          </article>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default function Page() {
+  return (
+    <div>
+      <Landing />
+      <About />
+    </div>
   );
 }

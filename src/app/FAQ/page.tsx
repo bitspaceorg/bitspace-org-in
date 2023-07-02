@@ -1,15 +1,3 @@
-export default function Faq() {
-  return (
-    <ul>
-      <li>A</li>
-      <li>A</li>
-      <li>A</li>
-      <li>A</li>
-      <li>A</li>
-      <li>A</li>
-      <li>A</li>
-      <li>A</li>
-      <li>A</li>
-    </ul>
-  );
+export default function Page() {
+  return <div></div>;
 }

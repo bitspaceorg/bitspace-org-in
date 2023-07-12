@@ -31,7 +31,7 @@ function About() {
   const Bullet = (props: { name: string; color: string }) => {
     return (
       <div className="flex justify-center items-center gap-3 text-sm">
-        <div className={`bg-${props.color}` + " w-4 h-4 rounded-full"}></div>
+        <div className={`bg-${props.color} w-4 h-4 rounded-full`}></div>
         <span className="font-inter font-bold">{props.name}</span>
       </div>
     );
